@@ -1,4 +1,4 @@
-pragma solidity ^0.4.22;
+pragma solidity ^0.4.21;
 
 contract ERC20Basic {
   function totalSupply() public view returns (uint256);
@@ -107,7 +107,7 @@ contract StudToken is StandardToken {
     string public constant symbol = 'STUD';
     uint8 public constant decimals = 3;
     string public constant version = 'S1.0';
-    constructor(uint256 _initialAmount) public {
+    function StudToken(uint256 _initialAmount) public {
         balances[msg.sender] = _initialAmount;
         totalSupply_ = _initialAmount;
     }
